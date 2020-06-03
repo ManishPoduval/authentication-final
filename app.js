@@ -36,21 +36,22 @@ app.use(logger('dev'));
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
  
-app.use(session({
-    secret: 'my-secret-weapon',
-    saveUninitialized: false,
-    resave: true,
-    cookie: {
-      maxAge: 60*60*24*1000 //60 sec * 60 min * 24hrs = 1 day (in milliseconds)
-    },
-    store: new MongoStore({
-        url: 'mongodb://localhost/basicAuth',
-        // mongooseConnection: mongoose.connection
-        //time to live (in seconds)
-        ttl: 60*60*24,
-        autoRemove: 'disabled'
-    })
-}));
+// app.use(session({
+//     secret: 'my-secret-weapon',
+//     saveUninitialized: false,
+//     resave: true,
+//     cookie: {
+//       maxAge: 60*60*24*1000 //60 sec * 60 min * 24hrs = 1 day (in milliseconds)
+//     },
+//     store: new MongoStore({
+//         url: 'mongodb://localhost/basicAuth',
+//         // mongooseConnection: mongoose.connection
+//         //time to live (in seconds)
+//         ttl: 60*60*24,
+//         autoRemove: 'disabled'
+//     })
+// }));
+console.log('Manish has changed this');
 
 
 // a body parser to allow us to parse form submissions
