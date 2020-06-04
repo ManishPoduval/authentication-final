@@ -63,6 +63,6 @@ app.use(cookieParser());
 
 // Routes middleware
 app.use('/', indexRouter);
-app.use('/auth', authRouter);
+app.use('/', authRouter);
 
 module.exports = app;
